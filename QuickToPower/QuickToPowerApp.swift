@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct QuickToPowerApp: App {
+    
+    @State var isLowPowerModeEnabled: Bool = ProcessInfo.processInfo.isLowPowerModeEnabled
+    @State var menuBarIcon: String = ProcessInfo.processInfo.isLowPowerModeEnabled ? "tortoise.fill" : "hare.fill"
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra("QuickToPower", systemImage: menuBarIcon) {
+            ContentView(isLowPowerModeEnabled: $isLowPowerModeEnabled, menuBarIcon: $menuBarIcon)
         }
     }
 }
