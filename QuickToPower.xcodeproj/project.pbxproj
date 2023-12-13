@@ -14,6 +14,8 @@
 		FA6ABF1A2B287A8300B7AE79 /* QuickToPowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6ABF192B287A8300B7AE79 /* QuickToPowerTests.swift */; };
 		FA6ABF242B287A8300B7AE79 /* QuickToPowerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6ABF232B287A8300B7AE79 /* QuickToPowerUITests.swift */; };
 		FA6ABF262B287A8300B7AE79 /* QuickToPowerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6ABF252B287A8300B7AE79 /* QuickToPowerUITestsLaunchTests.swift */; };
+		FAB93F722B2904BD00BC1EF4 /* PowerSourceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB93F712B2904BD00BC1EF4 /* PowerSourceMonitor.swift */; };
+		FAB93F742B29065B00BC1EF4 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB93F732B29065B00BC1EF4 /* IOKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		FA6ABF1F2B287A8300B7AE79 /* QuickToPowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickToPowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6ABF232B287A8300B7AE79 /* QuickToPowerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickToPowerUITests.swift; sourceTree = "<group>"; };
 		FA6ABF252B287A8300B7AE79 /* QuickToPowerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickToPowerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAB93F712B2904BD00BC1EF4 /* PowerSourceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSourceMonitor.swift; sourceTree = "<group>"; };
+		FAB93F732B29065B00BC1EF4 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = ../../../../../System/Library/Frameworks/IOKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB93F742B29065B00BC1EF4 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +102,8 @@
 			children = (
 				FA6ABF072B287A8200B7AE79 /* QuickToPowerApp.swift */,
 				FA6ABF092B287A8200B7AE79 /* ContentView.swift */,
+				FAB93F712B2904BD00BC1EF4 /* PowerSourceMonitor.swift */,
+				FAB93F732B29065B00BC1EF4 /* IOKit.framework */,
 				FA6ABF0B2B287A8300B7AE79 /* Assets.xcassets */,
 				FA6ABF102B287A8300B7AE79 /* QuickToPower.entitlements */,
 				FA6ABF0D2B287A8300B7AE79 /* Preview Content */,
@@ -261,6 +268,7 @@
 			files = (
 				FA6ABF0A2B287A8200B7AE79 /* ContentView.swift in Sources */,
 				FA6ABF082B287A8200B7AE79 /* QuickToPowerApp.swift in Sources */,
+				FAB93F722B2904BD00BC1EF4 /* PowerSourceMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /System/Library/Frameworks/IOKit.framework/IOKit;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -406,6 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /System/Library/Frameworks/IOKit.framework/IOKit;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -430,6 +440,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -459,6 +470,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
